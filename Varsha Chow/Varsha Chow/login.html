@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <style>
+      .container1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+      }
+
+      .form-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        width: 40%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin: 10px 0 5px;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      button {
+        margin-top: 15px;
+        padding: 12px;
+        background: #ff9800;
+        color: white;
+        font-size: 18px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background: #ff9800;
+      }
+
+      /* Popup Styling */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+
+      .popup button {
+        margin-top: 10px;
+        padding: 10px;
+        background: #ff9800;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      .popup button:hover {
+        background: #ff9800;
+      }
+      input:hover,
+      select:hover {
+        border: 2px solid #ff9800;
+      }
+
+      @media (max-width: 768px) {
+        .form-container {
+          width: 80%;
+        }
+      }
+    </style>
+
+    <div class="container1">
+      <div class="form-container">
+        <h2>Login</h2>
+        <form id="login-form">
+          <label for="username">Username:</label>
+          <input type="text" id="username" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" required />
+
+          <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+      </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+      <p>Login Successful!</p>
+      <button id="close-popup">OK</button>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const loginForm = document.getElementById("login-form");
+        const popup = document.getElementById("popup");
+        const closePopup = document.getElementById("close-popup");
+
+        loginForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          let username = document.getElementById("username").value;
+          let password = document.getElementById("password").value;
+
+          // Store user input in localStorage (No validation)
+          localStorage.setItem("user", JSON.stringify({ username, password }));
+
+          // Show popup
+          popup.style.display = "block";
+        });
+
+        closePopup.addEventListener("click", function () {
+          popup.style.display = "none";
+          window.location.href = "index.html"; // Redirect after closing popup
+        });
+      });
+    </script>
+  </body>
+</html>

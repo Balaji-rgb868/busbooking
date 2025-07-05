@@ -1,0 +1,75 @@
+/* Apply styles only to cybersecurity.html */
+.cyber-page {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Header */
+.cyber-page header {
+    text-align: center;
+    background: #222; /* Professional dark header */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.cyber-page header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Section Styling */
+.cyber-page section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.cyber-page h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.cyber-page p {
+    font-size: 18px;
+    text-align: justify;
+    color: #555;
+}
+
+/* List Styling */
+.cyber-page ul, .cyber-page ol {
+    padding-left: 20px;
+}
+
+.cyber-page li {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* Back to Home Link */
+.cyber-page .back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cyber-page .back-home:hover {
+    background: #e68900;
+}

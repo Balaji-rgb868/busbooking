@@ -1,0 +1,126 @@
+/* Apply styles only to gadgets.html */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    background-color: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Gadget Page Styles */
+.gadgets-page {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Header */
+.gadgets-page header {
+    text-align: center;
+    background: #222; /* Same as AI page */
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.gadgets-page header h1 {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Section Styling */
+.gadgets-page section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+.gadgets-page h2 {
+    font-size: 24px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.gadgets-page p {
+    font-size: 18px;
+    text-align: justify;
+    color: #555;
+}
+
+/* List Styling */
+.gadgets-page ul, .gadgets-page ol {
+    padding-left: 20px;
+}
+
+.gadgets-page li {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+/* Back to Home Link */
+.gadgets-page .back-home {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    text-decoration: none;
+    background: #ff9800;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.gadgets-page .back-home:hover {
+    background: #e68900;
+}

@@ -1,0 +1,81 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* Header & Navigation */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 10px 0;
+    background: #333;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Page Title */
+.review-title {
+    background: white;
+    padding: 40px 20px;
+    margin: 20px auto;
+}
+
+/* Specifications Table */
+.specs table {
+    width: 90%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
+.specs th, .specs td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.specs th {
+    background: #222;
+    color: white;
+}
+
+/* Review Content */
+.review-content {
+    text-align: left;
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+

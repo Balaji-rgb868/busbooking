@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Registration & Address Form</title>
+    <link rel="stylesheet" href="CSS/Style.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      body {
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+
+      .container {
+        max-width: 500px;
+        background: white;
+        padding: 20px;
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+      }
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      button {
+        margin-top: 15px;
+        padding: 12px;
+        background: #ff9800;
+        color: white;
+        font-size: 18px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button:hover {
+        background: #d35400;
+      }
+      /* Popup styles */
+      .popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+      }
+      .popup button {
+        margin-top: 10px;
+        background: #27ae60;
+      }
+      .popup button:hover {
+        background: #2ecc71;
+      }
+      input:hover,
+      select:hover {
+        border: 2px solid #ff9800;
+      }
+      .error {
+        color: red;
+        font-size: 0.9em;
+        margin-top: 5px;
+      }
+      @media (max-width: 768px) {
+        .container {
+          width: 90%;
+          padding: 15px;
+        }
+        input,
+        select,
+        textarea {
+          font-size: 14px;
+        }
+        button {
+          font-size: 16px;
+        }
+      }
+      /* Responsive Design */
+      @media screen and (max-width: 768px) {
+        nav ul {
+          display: none;
+        }
+
+        .hamburger {
+          display: block;
+        }
+      }
+
+      /*  */
+      .table-container {
+        margin-top: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      th {
+        background: #ff9800;
+        color: white;
+      }
+      @media (max-width: 768px) {
+        .container {
+          width: 90%;
+          padding: 15px;
+        }
+        input,
+        select {
+          font-size: 14px;
+        }
+        button {
+          font-size: 16px;
+        }
+      }
+
+      /* Container */
+    </style>
+  </head>
+  <body>
+    <!-- User Registration Form -->
+    <div class="container">
+      <h2>User Signup</h2>
+      <form id="registrationForm">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+        <span class="error" id="nameError"></span>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+        <span class="error" id="emailError"></span>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter password" />
+        <span class="error" id="passwordError"></span>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm password"
+        />
+        <span class="error" id="confirmPasswordError"></span>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" />
+        <span class="error" id="dobError"></span>
+
+        <label>Gender:</label>
+        <select id="gender">
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <span class="error" id="genderError"></span>
+
+        <label for="phone">Phone Number:</label>
+        <input type="text" id="phone" placeholder="Enter your phone number" />
+        <span class="error" id="phoneError"></span>
+
+        <button
+          type="button"
+          onclick="validateAndRegister()"
+          style="background-color: #ff9800"
+        >
+          Signup
+        </button>
+      </form>
+      <p></p>
+      <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+
+    <!-- Success Popup -->
+    <div id="successPopup" class="popup">
+      <h3>Registration Successful 🎉</h3>
+      <p>Your details have been saved.</p>
+      <button onclick="closePopup()">OK</button>
+    </div>
+
+    <script src="./index.js"></script>
+  </body>
+</html>

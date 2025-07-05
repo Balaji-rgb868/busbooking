@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Tech News & Reviews</title>
+    <link rel="stylesheet" href="./CSS/contact-style.css" />
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
+  <body class="contact-page">
+    <!-- Header & Navigation -->
+    <header>
+      <div class="logo">
+        <h1>Tech News & Reviews</h1>
+        <button class="menu-toggle" id="menu-toggle">&#9776;</button>
+      </div>
+      <nav class="nav-links">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">Latest News</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="guides.html">Guides</a></li>
+          <li><a href="videos.html">Videos</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Overlay Navigation -->
+    <div class="overlay" id="overlay">
+      <button class="close-btn" id="close-btn">&times;</button>
+      <ul class="overlay-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="news.html">Latest News</a></li>
+        <li><a href="reviews.html">Reviews</a></li>
+        <li><a href="guides.html">Guides</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Page Title -->
+    <section class="page-title">
+      <h1>Contact Us 📩</h1>
+      <p>
+        Have questions, feedback, or suggestions? Reach out to us using the form
+        below or through our contact details.
+      </p>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form action="thank-you.html" method="GET">
+        <label for="name">Your Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required
+        />
+
+        <label for="email">Your Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+        />
+
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Contact Info -->
+    <section class="contact-info">
+      <h2>Our Contact Details</h2>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:varshamikkilineni@gmail.com"
+          >varshamikkilineni@gmail.com</a
+        >
+      </p>
+      <p><strong>Phone:</strong> <a href="tel:+353871659494">0871659494</a></p>
+      <p>
+        <strong>Address:</strong> Flat 233, The New Hardwicke, Church Street,
+        Dublin 7, D07 HH32, Ireland
+      </p>
+    </section>
+
+    <!-- Google Maps Embed (Dublin City University) -->
+    <section class="map">
+      <h2>Find Us Here</h2>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381.8312617960164!2d-6.257664523520156!3d53.3858221724665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e47cc2299c5%3A0x472acdfacbe79b23!2sDublin%20City%20University!5e0!3m2!1sen!2sie!4v1643098176541!5m2!1sen!2sie"
+        width="100%"
+        height="300"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+      >
+      </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Tech News & Reviews. All rights reserved.</p>
+    </footer>
+  </body>
+  <script src="./index.js"></script>
+</html>
